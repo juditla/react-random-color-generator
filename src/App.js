@@ -79,10 +79,6 @@ export default function App() {
         style={{
           marginLeft: '100px',
           fontFamily: 'monospace',
-          // display: 'flex',
-          // flexDirection: 'column',
-          // justifyContent: 'center',
-          // alignItems: 'center',
         }}
       >
         Hue:{' '}
@@ -141,7 +137,7 @@ export default function App() {
           placeholder="300x300"
           style={{ width: '100px' }}
           onChange={(event) => {
-            if (event.currentTarget.value.match(/[0-9]{3}x[0-9]{3}/)) {
+            if (event.currentTarget.value.match(/^[0-9]{3}x[0-9]{3}$/)) {
               setBoxSize({
                 width: event.currentTarget.value.slice(0, 3) + 'px',
                 height: event.currentTarget.value.slice(4) + 'px',
